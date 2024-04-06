@@ -66,14 +66,40 @@
     <a name="circuit" val="AU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(270,130)" name="Pin">
+    <comp lib="0" loc="(190,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(270,160)" name="Pin">
+    <comp lib="0" loc="(190,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
     </comp>
+    <comp lib="0" loc="(420,560)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="selector"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(680,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="result"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(640,330)" name="Multiplexer">
+      <a name="select" val="4"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="3" loc="(110,460)" name="BitAdder"/>
+    <comp lib="3" loc="(460,120)" name="Adder"/>
+    <wire from="(190,150)" to="(220,150)"/>
+    <wire from="(190,170)" to="(240,170)"/>
+    <wire from="(420,560)" to="(620,560)"/>
+    <wire from="(620,410)" to="(620,560)"/>
   </circuit>
   <circuit name="LU">
     <a name="appearance" val="logisim_evolution"/>
